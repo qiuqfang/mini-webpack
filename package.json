@@ -9,5 +9,9 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@babel/parser": "^7.17.8",
+    "@babel/traverse": "^7.17.3"
+  }
 }
