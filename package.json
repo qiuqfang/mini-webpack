@@ -11,7 +11,10 @@
   "keywords": [],
   "description": "",
   "dependencies": {
+    "@babel/core": "^7.17.8",
     "@babel/parser": "^7.17.8",
-    "@babel/traverse": "^7.17.3"
+    "@babel/preset-env": "^7.16.11",
+    "@babel/traverse": "^7.17.3",
+    "ejs": "^3.1.6"
   }
 }

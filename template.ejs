@@ -1,0 +1,22 @@
+(function (modules) {
+  function require(id) {
+    const [fn, mapping] = modules[id];
+
+    const module = { exports: {} };
+
+    function localRequire(filePath) {
+      return require(mapping[filePath]);
+    }
+
+    fn(localRequire, module, module.exports);
+
+    return module.exports;
+  }
+  require(0);
+})({
+  <% graph.forEach((info, index) => { %>
+    <%- index %>: [function (require, module, exports) {
+      <%- info.code %> 
+    },<%-  JSON.stringify(info.mapping) %> ],
+  <%}) %>
+});
